@@ -1,0 +1,21 @@
+.bg-aqua{
+    background-color:lightseagreen;
+}
+
+.logo-width{
+    width:5%;
+}
+.texto-blanco{
+    color:white;
+}
+.bg-oscuro{
+    background-color: black;
+}
+.iconos{
+    width:100%;
+    height:40px;
+}
+hr {
+    border: 1px solid;
+    color: lightseagreen;
+}
