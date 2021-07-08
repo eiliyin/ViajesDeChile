@@ -8,14 +8,15 @@
 
     <!--Modificar el google font por las fuentes correspondientes-->
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Se utiliza la version 4.6 de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/estilos.css">
@@ -27,10 +28,11 @@
 <body>
 
     <!-- navbar -->
-    <nav class="container-fluid navbar navbar-expand-lg bg-aqua fixed-top navbar-dark">
+    <nav class="container-fluid navbar navbar-expand-lg bg-info fixed-top navbar-dark">
         <div class="container">
-            <img class="logo-width" src="assets/img/viajes.svg" alt="">
-            <a class="navbar-brand ml-2">Viajes de Chile </a>
+            <!-- Incorporacion de Ventana Modal -->
+            <img class="logo-width" data-toggle="modal" data-target="#exampleModal" src="assets/img/viajes.svg" alt="">
+            <a class="navbar-brand ml-2">Viajes Chile </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,16 +42,16 @@
                 <ul class="navbar-nav ml-auto ">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#Sobre-Mi">Inicio</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Experiencia">Quienes somos</a>
+                        <a class="nav-link" href="#Quienes-somos">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Trabajos">Destacados</a>
+                        <a class="nav-link" href="#destacados">Destacados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Contacto">Contacto</a>
+                        <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
 
             </div>
@@ -61,13 +63,13 @@
         <div id="carouselExampleControls" class=" carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/img/carousel1.jpg" class="d-block w-100 foto-height" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/img/carousel2.jpg" class="d-block w-100 foto-height" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/img/carousel3.jpg" class="d-block w-100 foto-height" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -82,58 +84,76 @@
 
     </div>
     <!-- Quienes somos -->
-    <div class="container-fluid bg-oscuro text-white py-4 d-sm-none d-md-block">
+    <div id="Quienes-somos" class="container-fluid bg-oscuro text-white py-5 d-sm-none d-md-block">
         <section class="container-fluid">
-            <h4 class="text-center ">¿Quienes somos?</h4>
-            <hr>
+            <h4 class="text-center data-toggle=" tooltip" data-placement="top"
+                title="¿A Que esperas para viajar por chile?">¿Quienes somos?</h4>
+            <hr class="hr-color">
         </section>
-        <div class="row">
-            <div class="col-md-4 ">
-                <div class="bg-aqua iconos text-center">
-                    <i class="fas fa-plane fa-2x mt-1"></i>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="bg-info iconos text-center">
+                        <i class="fas fa-plane fa-2x mt-1" data-toggle="popover" title="Viaja seguro"
+                            data-content="Tenemos los mejores pilotos expertos, y las mejores tarifas del mercado!!"></i>
+                    </div>
+                    <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet blanditiis
+                        ipsa debitis iusto nulla aliquid aperiam ratione dolor, fugiat doloribus asperiores molestiae
+                        pariatur eum culpa amet, nisi ab eos. Commodi saepe eius nam, ea iusto libero, possimus
+                        reprehenderit delectus sequi ab dignissimos rerum cum alias asperiores suscipit, aperiam
+                        laudantium odio animi atque vero quam temporibus? Voluptate provident eligendi accusantium porro
+                        iste, velit similique nihil aut, voluptas omnis ipsa sunt amet quisquam impedit? Impedit
+                        deleniti consequuntur dolor rem, cum, quidem similique eligendi dolore aliquid accusamus itaque
+                        provident asperiores pariatur culpa veritatis consectetur sit soluta. Quo, magni cumque
+                        molestias fugiat officiis quas!</p>
                 </div>
-                <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nesciunt debitis
-                    repudiandae adipisci rem modi at architecto in alias, ipsa eaque similique error ducimus temporibus
-                    maxime porro quidem deleniti commodi odit voluptatum assumenda distinctio voluptatem. Deleniti in
-                    quae iure cum libero numquam ipsam assumenda asperiores quia esse? Excepturi, dolor quas blanditiis
-                    repellat ex vitae nesciunt eveniet fuga, labore, odit perferendis!</p>
-            </div>
-            <div class="col-md-4 ">
-                <p class="text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis porro delectus
-                    ratione. Suscipit quisquam quam iste animi libero sequi voluptatem amet illo, deleniti a nesciunt
-                    modi quibusdam omnis! Impedit, corrupti! Sint possimus veritatis velit perspiciatis iusto aperiam
-                    temporibus in earum quos aliquid impedit obcaecati quae odio aliquam officia, dolorem maiores qui
-                    quas vero non iure aspernatur doloremque. Recusandae, ipsa magni!</p>
-                <div class="bg-aqua iconos text-center">
-                    <i class="fas fa-mountain fa-2x mt-1"></i>
+                <div class="col-md-4">
+                    <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, ipsam
+                        eos quis sint hic, similique est delectus laudantium quibusdam laborum id, doloribus assumenda
+                        neque mollitia dolor vel illum! Ex repudiandae, consectetur amet dicta omnis repellendus,
+                        sapiente sit vel ducimus possimus illo qui error sequi magni quisquam, neque animi hic eveniet?
+                        Ipsum reprehenderit cumque laudantium nostrum nesciunt? Hic earum fugiat aliquam numquam
+                        voluptatum. Alias, id adipisci corporis, dolorem, ad temporibus laudantium provident quia nisi
+                        reiciendis et perspiciatis ipsam veritatis minima exercitationem cum eius facere. Ipsum, omnis
+                        quia ea iusto quo ad esse cumque? Accusamus numquam dolorem aliquid quae temporibus voluptatibus
+                        id.</p>
+                    <div class="bg-info iconos text-center mb-2">
+                        <!--Ponte sobre la montaña PopOver -->
+                        <i class="fas fa-mountain fa-2x mt-1" data-toggle="popover" data-placement="top"
+                            title="Hola, soy una montaña"
+                            data-content="Puedes visitarme si contratas los servicios de Agencia Viajes Chile, a que esperas!!-"></i>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="bg-info iconos text-center">
+                        <i class="fas fa-route fa-2x mt-1"></i>
+                    </div>
+                    <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem
+                        blanditiis id porro expedita amet veniam laudantium debitis beatae facilis impedit fugiat, eos
+                        est voluptates aliquid earum voluptatibus similique exercitationem illum quo quae quas saepe.
+                        Doloremque totam recusandae doloribus ad temporibus unde! Sed ipsum vero rem inventore explicabo
+                        id iusto officia esse voluptate aliquam, hic dolorum sapiente officiis excepturi error minus
+                        rerum blanditiis quo voluptatum deserunt vel? Incidunt adipisci a suscipit eum natus accusamus
+                        reiciendis, veniam ut vero ea vitae voluptas ullam quae nulla omnis esse optio amet. Ut
+                        repudiandae commodi quasi amet maiores voluptate culpa voluptatibus, laudantium cum ipsum!</p>
                 </div>
             </div>
-            <div class="col-md-4 ">
-                <div class="bg-aqua iconos text-center">
-                    <i class="fas fa-route fa-2x mt-1"></i>
-                </div>
-                <p class="text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi rem incidunt
-                    nesciunt, assumenda earum beatae nemo quidem necessitatibus nisi, repudiandae aliquid repellendus ut
-                    error accusantium? Temporibus aut maiores quo dolores vel, nobis velit magni quia sed ut doloribus
-                    sequi cumque perferendis nulla assumenda ea repellat necessitatibus ipsam consectetur adipisci et
-                    harum. Id eum quaerat rerum deserunt dolorum maiores vitae architecto?</p>
-            </div>
-        </div>
+        </section>
     </div>
 
     <!-- Destacados -->
-    <div class="container-fluid bg-oscuro">
+    <div id="destacados" class="container-fluid bg-oscuro">
         <section class="container-fluid bg-oscuro">
             <h4 class="text-center text-white ">Destacados</h4>
-            <hr>
-        </section>     
-            <section class="container">   
+            <hr class="hr-color">
+        </section>
+        <section class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 ">
                     <div class="card-group my-5 ">
                         <div class="card text-white">
                             <img src="assets/img/card1.jpg" class="card height" alt="...">
-                            <div class="card-body bg-aqua">
+                            <div class="card-body bg-info">
                                 <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Repellendus
@@ -148,7 +168,7 @@
                     <div class="card-group my-5 ">
                         <div class="card text-white">
                             <img src="assets/img/card2.jpg" class="card height" alt="...">
-                            <div class="card-body bg-aqua">
+                            <div class="card-body bg-info">
                                 <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Repellendus
@@ -163,7 +183,7 @@
                     <div class="card-group my-5 ">
                         <div class="card text-white">
                             <img src="assets/img/card3.jpg" class="card height" alt="...">
-                            <div class="card-body bg-aqua">
+                            <div class="card-body bg-info">
                                 <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Repellendus
@@ -178,7 +198,7 @@
                     <div class="card-group my-5 ">
                         <div class="card text-white">
                             <img src="assets/img/card4.jpg" class="card height" alt="...">
-                            <div class="card-body bg-aqua">
+                            <div class="card-body bg-info">
                                 <h5 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Repellendus
@@ -194,8 +214,84 @@
         </section>
     </div>
     <!-- Contacto -->
+    <div id="contacto" class="container-fluid bg-oscuro">
+        <section class="container-fluid bg-oscuro">
+            <h4 class="text-center text-white ">Contacto</h4>
+            <hr>
+        </section>
+        <section class="container">
+
+            <div class="typeform-widget" data-url="https://form.typeform.com/to/tLgVntuY?typeform-medium=embed-snippet"
+                style="width: 100%; height: 500px;"></div>
+            <script>
+                (function () {
+                    var qs, js, q, s, d = document,
+                        gi = d.getElementById,
+                        ce = d.createElement,
+                        gt = d.getElementsByTagName,
+                        id = "typef_orm",
+                        b = "https://embed.typeform.com/";
+                    if (!gi.call(d, id)) {
+                        js = ce.call(d, "script");
+                        js.id = id;
+                        js.src = b + "embed.js";
+                        q = gt.call(d, "script")[0];
+                        q.parentNode.insertBefore(js, q)
+                    }
+                })()
+            </script>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-info py-2">
+        <section class="container ">
+            <div class="row ">
+                <section class="col-sm-12 col-md-8 ">
+                    <h4 class="text-uppercase font-weight-bold text-white pl-5 centrado ">Viajes Chile</h4>
+
+                </section>
+                <section class="col-sm-12 col-md-4 text-white text-center">
+                    <i class="fab fa-github-square fa-2x mx-2"></i>
+                    <i class="fab fa-linkedin fa-2x mx-2"></i>
+                    <i class="fab fa-twitter-square fa-2x mx-2"></i>
+                    <i class="fab fa-facebook-square fa-2x mx-2"></i>
+                </section>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Ventana Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Viajes Chile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Viaje junto a nosotros</h5>
+                    <p>Hazme click y descubre mas información <a href="#Quienes-somos" role="button"
+                            class="btn btn-secondary popover-test" data-toggle="popover" title="Ir a quienes somos"
+                            data-content="Descubre quienes somos y a donde puedes viajar">Clickeame</a> :D .</p>
 
 
+                    <hr>
+                    <h5>Información Adicional</h5>
+                    <p><a href="#destacados" class="tooltip-test" title="Viaje a distintos lugares">quedate sobre mi</a> o <a
+                            href="#contacto" class="tooltip-test" title="Hermosas aventuras y parajes te esperan!!">sobre mi</a>
+                        para mas informacion sobre nuestros destinos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -205,7 +301,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
     </script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
